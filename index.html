@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pinça Peças - Manual do Usuário</title>
+
+    <!-- Bootstrap CSS via CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Bootstrap Icons via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .navbar {
+            box-shadow: 0 2px 4px rgba(0,0,0,.1);
+        }
+        .hero {
+            background: linear-gradient(45deg, #0d6efd, #6f42c1);
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 0.5rem;
+        }
+        .section-icon {
+            font-size: 2.5rem;
+            color: #0d6efd;
+        }
+        .card {
+            transition: transform .2s, box-shadow .2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0,0,0,.15);
+        }
+        .footer {
+            background-color: #343a40;
+            color: white;
+        }
+        .badge {
+            font-size: 0.9em;
+        }
+        code {
+            background-color: #e9ecef;
+            padding: 0.2rem 0.4rem;
+            border-radius: 0.2rem;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de Navegação -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-pin-angle-fill"></i>
+                Pinça Peças
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#introducao">Introdução</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#interface">Interface</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#funcionalidades">Funcionalidades</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dicas">Dicas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#problemas">Solução de Problemas</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container mt-5">
+
+        <!-- Seção de Introdução -->
+        <section id="introducao" class="text-center hero mb-5">
+            <h1 class="display-4">Bem-vindo ao Pinça Peças!</h1>
+            <p class="lead">Sua ferramenta definitiva para extrair, organizar e otimizar documentos de processos em PDF com precisão e velocidade.</p>
+            <hr class="my-4">
+            <p>Este manual foi criado para guiá-lo por todas as funcionalidades do software, desde a extração simples até o poderoso processamento em lote.</p>
+        </section>
+
+        <!-- Seção da Interface -->
+        <section id="interface" class="my-5">
+            <h2 class="text-center mb-4"><i class="bi bi-window-split section-icon"></i><br>Conhecendo a Interface</h2>
+            <p class="text-center text-muted mb-5">A interface foi projetada para ser intuitiva. Ela é dividida em 4 áreas principais:</p>
+            
+            <div class="row text-center gy-4">
+                <div class="col-md-3">
+                    <div class="p-3 border bg-light rounded shadow-sm h-100">
+                        <h5>1. Arquivo</h5>
+                        <p>Área para abrir um único arquivo PDF e visualizar todos os seus marcadores.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 border bg-light rounded shadow-sm h-100">
+                        <h5>2. Filtros</h5>
+                        <p>O cérebro da operação: aqui você adiciona, salva e carrega os termos para encontrar as peças desejadas.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 border bg-light rounded shadow-sm h-100">
+                        <h5>3. Resultados</h5>
+                        <p>Exibe os documentos encontrados no PDF aberto, em sua ordem original, com o respectivo intervalo de páginas.</p>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="p-3 border bg-light rounded shadow-sm h-100">
+                        <h5>4. Ações e Salvamento</h5>
+                        <p>Onde a mágica acontece! Escolha como salvar e execute a extração para um arquivo ou para uma pasta inteira.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção de Funcionalidades -->
+        <section id="funcionalidades" class="my-5">
+            <h2 class="text-center mb-5"><i class="bi bi-gear-wide-connected section-icon"></i><br>Funcionalidades Detalhadas</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-header h5"><i class="bi bi-filter"></i> Uso de Filtros</div>
+                        <div class="card-body">
+                            <p class="card-text">Os filtros são o coração do Pinça Peças. Eles funcionam com uma lógica <strong>"OU"</strong>: se você adicionar os filtros <span class="badge bg-secondary">Petição</span> e <span class="badge bg-secondary">Sentença</span>, o programa listará todos os documentos que contenham "Petição" <strong>OU</strong> "Sentença" em seus marcadores.</p>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Adicionar Filtro:</strong> Digite o termo e pressione "Enter".</li>
+                                <li class="list-group-item"><strong>Remover Filtro:</strong> Clique no "x" do "badge" correspondente.</li>
+                                <li class="list-group-item"><strong>Ignorar Maiúsculas/Minúsculas:</strong> Marque esta caixa para que a busca por "petição" também encontre "Petição" e "PETIÇÃO". Por padrão, a busca diferencia as letras.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-header h5"><i class="bi bi-archive"></i> Salvar e Carregar Filtros</div>
+                        <div class="card-body">
+                            <p class="card-text">Economize tempo e mantenha a consistência em seu trabalho salvando seus conjuntos de filtros mais usados.</p>
+                             <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Salvar Filtros:</strong> Com os filtros desejados na tela, clique em "Salvar Filtros" e escolha um nome e local para seu arquivo <span class="badge bg-info text-dark">.json</span>.</li>
+                                <li class="list-group-item"><strong>Carregar Filtros:</strong> Clique em "Carregar Filtros", selecione um arquivo <span class="badge bg-info text-dark">.json</span> salvo anteriormente e seus filtros aparecerão instantaneamente.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-header h5"><i class="bi bi-file-earmark-pdf"></i> Extração de Arquivo Único</div>
+                        <div class="card-body">
+                            <p class="card-text">Ideal para trabalhar com um processo específico que você tenha aberto.</p>
+                            <ol class="list-group list-group-numbered list-group-flush">
+                                <li class="list-group-item">Clique em <strong>"Abrir PDF"</strong> e selecione o arquivo.</li>
+                                <li class="list-group-item">Use os filtros para encontrar as peças desejadas na lista de resultados.</li>
+                                <li class="list-group-item"><strong>Selecione as peças:</strong> Você pode clicar para selecionar uma ou mais peças na lista (use <code>Ctrl+Clique</code> ou <code>Shift+Clique</code>). Se nada for selecionado, o programa assume que você quer extrair TUDO da lista.</li>
+                                <li class="list-group-item">Escolha a opção de salvamento ("arquivo único" ou "separadamente").</li>
+                                <li class="list-group-item">Clique em <strong>"Executar e Salvar"</strong>.</li>
+                            </ol>
+                            <div class="alert alert-success mt-3"><strong>Dica:</strong> Os PDFs extraídos manterão os marcadores originais, facilitando a navegação!</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-header h5"><i class="bi bi-folder2-open"></i> Processamento em Lote (Pastas)</div>
+                        <div class="card-body">
+                            <p class="card-text">A funcionalidade mais poderosa para automação. Aplique seus filtros a centenas de PDFs de uma só vez.</p>
+                            <ol class="list-group list-group-numbered list-group-flush">
+                                <li class="list-group-item"><strong>Importante:</strong> Você <strong>NÃO</strong> precisa abrir um PDF individual para esta função.</li>
+                                <li class="list-group-item">Adicione ou carregue os filtros que deseja aplicar.</li>
+                                <li class="list-group-item">Escolha a opção de salvamento. Esta escolha será respeitada para CADA PDF na pasta.</li>
+                                <li class="list-group-item">Clique em <strong>"Processar Pasta..."</strong>.</li>
+                                <li class="list-group-item">Selecione a <strong>pasta de entrada</strong> (onde estão seus PDFs) e depois a <strong>pasta de saída</strong> (onde os resultados serão salvos).</li>
+                            </ol>
+                             <div class="alert alert-warning mt-3"><strong>Atenção:</strong> Se escolher "separadamente", o programa criará subpastas para cada PDF processado, mantendo tudo organizado.</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Seção de Dicas -->
+        <section id="dicas" class="my-5">
+            <h2 class="text-center mb-4"><i class="bi bi-lightbulb section-icon"></i><br>Dicas e Boas Práticas</h2>
+             <ul class="list-group">
+                <li class="list-group-item d-flex align-items-center"><i class="bi bi-check-lg text-success me-3 fs-4"></i> Use filtros curtos e genéricos. "Contestação" é melhor que "Peça de Contestação do Reclamado".</li>
+                <li class="list-group-item d-flex align-items-center"><i class="bi bi-check-lg text-success me-3 fs-4"></i> Para PDFs sem marcadores, o botão "Ver Todos os Marcadores" não mostrará nada. A extração só funciona em PDFs com marcadores.</li>
+                <li class="list-group-item d-flex align-items-center"><i class="bi bi-check-lg text-success me-3 fs-4"></i> Durante operações longas (como processar uma pasta grande), use o botão <strong>"Cancelar"</strong> para interromper a tarefa com segurança.</li>
+                 <li class="list-group-item d-flex align-items-center"><i class="bi bi-check-lg text-success me-3 fs-4"></i> Organize seus filtros salvos (<span class="badge bg-info text-dark">.json</span>) em uma pasta para fácil acesso.</li>
+            </ul>
+        </section>
+
+        <!-- Seção de Solução de Problemas -->
+        <section id="problemas" class="my-5">
+            <h2 class="text-center mb-4"><i class="bi bi-question-circle section-icon"></i><br>Solução de Problemas</h2>
+            <div class="accordion" id="accordionTroubleshooting">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                            O programa não abre ou exibe uma mensagem de erro ao iniciar.
+                        </button>
+                    </h2>
+                    <div id="q1" class="accordion-collapse collapse" data-bs-parent="#accordionTroubleshooting">
+                        <div class="accordion-body">
+                            Isso pode acontecer se algum componente do programa foi corrompido. Tente baixar o programa novamente de sua fonte original. Se estiver usando Windows, às vezes o antivírus pode bloquear a execução; tente executar como administrador (clique direito > Executar como administrador).
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+                            Abri um PDF, mas a lista de resultados está vazia e "Ver Todos os Marcadores" não mostra nada.
+                        </button>
+                    </h2>
+                    <div id="q2" class="accordion-collapse collapse" data-bs-parent="#accordionTroubleshooting">
+                        <div class="accordion-body">
+                            Isso significa que o arquivo PDF que você abriu <strong>não possui marcadores</strong> (bookmarks). O Pinça Peças depende desses marcadores para identificar e extrair os documentos. Infelizmente, não há como processar este arquivo específico com o programa.
+                        </div>
+                    </div>
+                </div>
+                 <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+                            O programa parece travar durante uma operação longa.
+                        </button>
+                    </h2>
+                    <div id="q3" class="accordion-collapse collapse" data-bs-parent="#accordionTroubleshooting">
+                        <div class="accordion-body">
+                            A barra de progresso deve indicar que o programa está trabalhando. Se ela não se mover por muito tempo, você pode usar o botão <strong>"Cancelar"</strong> para interromper a operação. Processar pastas com centenas de arquivos muito grandes pode levar algum tempo.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="footer mt-auto py-3">
+        <div class="container text-center">
+            <span>Pinça Peças - Desenvolvido por <strong>Hudson Queiroz</strong>. Uso gratuito. Proibido a comercialização.</span>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
