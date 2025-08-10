@@ -45,9 +45,6 @@
             border-radius: 0.2rem;
             font-size: 0.9em;
         }
-        .nav-pills .nav-link.active {
-            background-color: #0d6efd;
-        }
     </style>
 </head>
 <body>
@@ -77,9 +74,9 @@
 
         <section id="introducao" class="text-center hero mb-5">
             <h1 class="display-4">Bem-vindo ao Pinça Peças v1.0!</h1>
-            <p class="lead">Sua ferramenta multifuncional para extrair e dividir documentos PDF com precisão e velocidade.</p>
+            <p class="lead">Sua suíte completa de automação para extrair, dividir e preparar PDFs de processos com precisão e velocidade.</p>
             <hr class="my-4">
-            <p class="mb-4">Agora, além da extração inteligente por peças, você pode dividir qualquer PDF em partes menores. Este manual cobre todas as funcionalidades.</p>
+            <p class="mb-4">Este manual detalha todas as funcionalidades, incluindo o poderoso processamento em lote agora disponível para todas as ferramentas.</p>
             <a href="https://raw.githubusercontent.com/hudsonqa/Pinca_Pecas/main/Pinca_Pecas.zip" class="btn btn-light btn-lg">
                 <i class="bi bi-download"></i>
                 Baixar Pinça Peças
@@ -126,28 +123,26 @@
         </section>
 
         <section id="interface" class="my-5">
-            <h2 class="text-center mb-4"><i class="bi bi-window-split section-icon"></i><br>Navegando pela Interface</h2>
-            <p class="text-center text-muted mb-5">O Pinça Peças é organizado em abas. Clique em uma aba para alternar entre as funcionalidades.</p>
+            <h2 class="text-center mb-4"><i class="bi bi-window-split section-icon"></i><br>As Ferramentas do Pinça Peças</h2>
+            <p class="text-center text-muted mb-5">O programa é organizado em três abas, cada uma sendo uma ferramenta poderosa e independente.</p>
             
-            <ul class="nav nav-pills justify-content-center mb-3" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active" id="pills-extract-tab" data-bs-toggle="pill" data-bs-target="#pills-extract" type="button" role="tab">Extração por Peças</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="pills-split-tab" data-bs-toggle="pill" data-bs-target="#pills-split" type="button" role="tab">Divisão por Páginas</button>
-                </li>
-            </ul>
-            <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-extract" role="tabpanel">
-                    <div class="p-3 border bg-light rounded shadow-sm">
-                        <h5><i class="bi bi-bookmarks-fill"></i> Aba: Extração por Peças</h5>
-                        <p>Use esta aba para extrair documentos específicos (peças processuais) de um PDF, baseando-se nos marcadores (bookmarks) do arquivo. Ideal para processos bem estruturados.</p>
+            <div class="row text-center gy-4">
+                <div class="col-md-4">
+                    <div class="p-3 border bg-light rounded shadow-sm h-100">
+                        <h5><i class="bi bi-bookmarks-fill"></i> Extração por Peças</h5>
+                        <p>Para extrair documentos específicos (Petição, Sentença) de PDFs com marcadores.</p>
                     </div>
                 </div>
-                <div class="tab-pane fade" id="pills-split" role="tabpanel">
-                    <div class="p-3 border bg-light rounded shadow-sm">
-                        <h5><i class="bi bi-file-earmark-break-fill"></i> Aba: Divisão por Páginas</h5>
-                        <p>Use esta aba para dividir qualquer PDF em arquivos menores com um número fixo de páginas. Perfeito para documentos longos ou sem marcadores.</p>
+                <div class="col-md-4">
+                    <div class="p-3 border bg-light rounded shadow-sm h-100">
+                        <h5><i class="bi bi-file-earmark-break-fill"></i> Divisão por Páginas</h5>
+                        <p>Para quebrar qualquer PDF longo em partes menores com um número fixo de páginas.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="p-3 border bg-light rounded shadow-sm h-100">
+                        <h5><i class="bi bi-gavel"></i> Extração por Atos Recentes</h5>
+                        <p>Para "cortar" o início de um processo, mantendo apenas as movimentações mais recentes.</p>
                     </div>
                 </div>
             </div>
@@ -155,58 +150,51 @@
 
         <section id="funcionalidades" class="my-5">
             <h2 class="text-center mb-5"><i class="bi bi-gear-wide-connected section-icon"></i><br>Funcionalidades em Detalhe</h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div class="row row-cols-1 g-4">
 
-                <div class="col-12">
+                <div class="col">
                     <div class="card h-100">
-                        <div class="card-header h5"><i class="bi bi-filter-circle-fill"></i> O Poder dos Filtros (Aba de Extração)</div>
+                        <div class="card-header h5"><i class="bi bi-bookmarks-fill"></i> Aba: Extração por Peças</div>
                         <div class="card-body">
-                            <p class="card-text">Os filtros são a principal ferramenta para encontrar exatamente o que você precisa. Eles funcionam de maneira simples e poderosa:</p>
-                            <h6 class="mt-3">Como Funcionam?</h6>
-                            <p>A lógica é de <strong>"OU"</strong>. Se você adicionar os filtros <span class="badge bg-secondary">Petição</span> e <span class="badge bg-secondary">Sentença</span>, o programa listará todos os documentos que contenham "Petição" <strong>OU</strong> que contenham "Sentença" em seus marcadores.</p>
-                            <h6 class="mt-3">Recursos dos Filtros:</h6>
+                            <h6 class="card-subtitle mb-2 text-muted">Quando usar? Para extrair documentos específicos de um processo com marcadores.</h6>
+                            <p class="card-text">A função principal para organizar processos bem estruturados. Você define quais peças quer encontrar (ex: "Sentença", "Contestação") e o programa as extrai para você.</p>
+                            <h6 class="mt-3">Recursos Principais:</h6>
                             <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><strong>Adicionar:</strong> Digite um termo e pressione a tecla <strong>Enter</strong>. O "badge" do filtro aparecerá.</li>
-                                <li class="list-group-item"><strong>Remover:</strong> Simplesmente clique no <strong>"x"</strong> do "badge" que deseja remover. A lista de resultados se atualizará na hora.</li>
-                                <li class="list-group-item"><strong>Sensibilidade de Caixa:</strong> A caixa <strong>"Ignorar maiúsculas/minúsculas"</strong> oferece controle total. Desmarcada (padrão), a busca por "sentença" não encontrará "Sentença". Marcada, ela encontrará ambas.</li>
-                                <li class="list-group-item"><strong>Salvar e Carregar:</strong> A combinação mais eficiente! Configure seus filtros favoritos uma vez e clique em <strong>"Salvar Filtros"</strong>. Na próxima vez, basta clicar em <strong>"Carregar Filtros"</strong> para trazer de volta todo o seu conjunto de busca com um único clique.</li>
+                                <li class="list-group-item"><strong>Filtros Inteligentes:</strong> Adicione termos de busca que funcionam com lógica "OU". Salve e carregue seus conjuntos de filtros para reutilizá-los.</li>
+                                <li class="list-group-item"><strong>Opções de Salvamento:</strong> Junte todas as peças encontradas em um único PDF ou salve cada uma em um arquivo separado.</li>
+                                <li class="list-group-item"><strong>Processamento em Lote:</strong> Use o botão <strong>"Processar Pasta..."</strong> para aplicar seus filtros e regras de salvamento a uma pasta inteira de processos de uma só vez.</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-12">
-                    <div class="card h-100 mt-4">
-                        <div class="card-header h5"><i class="bi bi-folder2-open"></i> Automação com Processamento em Lote (Aba de Extração)</div>
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-header h5"><i class="bi bi-file-earmark-break-fill"></i> Aba: Divisão por Páginas</div>
                         <div class="card-body">
-                            <p class="card-text">Esta é a funcionalidade mais poderosa para economizar tempo, aplicando suas regras de extração a múltiplos arquivos de uma só vez.</p>
-                            <h6 class="mt-3">Quando usar?</h6>
-                            <p>Imagine que você recebeu 50 processos em PDF e precisa extrair a "Petição Inicial" e a "Sentença" de cada um. Fazer isso manualmente levaria horas. Com o processamento em lote, você faz em minutos.</p>
-                            <h6 class="mt-3">Passo a Passo:</h6>
-                            <ol class="list-group list-group-numbered list-group-flush">
-                                <li class="list-group-item"><strong>1. Configure os Filtros:</strong> Adicione ou carregue os filtros para as peças que você deseja extrair de TODOS os arquivos (ex: "Petição Inicial", "Sentença").</li>
-                                <li class="list-group-item"><strong>2. Escolha a Opção de Salvamento:</strong> Esta escolha é crucial.
-                                    <ul>
-                                        <li><strong>Salvar separadamente (Recomendado):</strong> O programa criará uma subpasta para cada PDF de entrada, e dentro dela salvará as peças encontradas. Ex: `Saida/Processo_001/Sentença.pdf`. Isso mantém tudo perfeitamente organizado.</li>
-                                        <li><strong>Salvar em arquivo único:</strong> Para cada PDF de entrada, o programa criará um único PDF de saída contendo todas as peças encontradas. Ex: `Saida/Processo_001_extraido.pdf`.</li>
-                                    </ul>
-                                </li>
-                                <li class="list-group-item"><strong>3. Clique em "Processar Pasta..."</strong> e selecione a pasta de <strong>entrada</strong> (onde estão os PDFs originais) e depois a pasta de <strong>saída</strong> (onde os resultados serão salvos).</li>
-                            </ol>
+                            <h6 class="card-subtitle mb-2 text-muted">Quando usar? Para qualquer PDF muito longo, especialmente aqueles sem marcadores.</h6>
+                            <p class="card-text">A solução universal para tornar arquivos gigantescos mais gerenciáveis. Funciona com qualquer tipo de PDF.</p>
+                            <h6 class="mt-3">Recursos Principais:</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Divisão Simples:</strong> Abra um PDF, defina de quantas em quantas páginas quer dividir (ex: 100) e salve os arquivos resultantes.</li>
+                                <li class="list-group-item"><strong>Processamento em Lote:</strong> Use o botão <strong>"Dividir Pasta..."</strong> para aplicar a mesma regra de divisão (ex: "dividir a cada 100 páginas") para todos os PDFs dentro de uma pasta selecionada.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                 <div class="col-12">
-                    <div class="card h-100 mt-4">
-                        <div class="card-header h5"><i class="bi bi-file-earmark-break-fill"></i> Divisão Simples por Páginas (Aba de Divisão)</div>
+                
+                <div class="col">
+                    <div class="card h-100">
+                        <div class="card-header h5"><i class="bi bi-gavel"></i> Aba: Extração por Atos Recentes</div>
                         <div class="card-body">
-                            <p class="card-text">Esta função é a solução universal para qualquer PDF, especialmente aqueles sem marcadores ou muito longos.</p>
-                            <h6 class="mt-3">Passo a Passo:</h6>
-                            <ol class="list-group list-group-numbered list-group-flush">
-                                <li class="list-group-item"><strong>1. Abra o PDF:</strong> Use o botão "Abrir PDF" dentro desta aba.</li>
-                                <li class="list-group-item"><strong>2. Defina o Intervalo:</strong> No campo "Dividir a cada", insira o número máximo de páginas que cada arquivo de saída deve ter (ex: 50, 100, 200).</li>
-                                <li class="list-group-item"><strong>3. Clique em "Dividir e Salvar..."</strong> e escolha a pasta de destino. O programa criará os arquivos numerados para você (ex: `documento_parte_1.pdf`, `documento_parte_2.pdf`, etc.).</li>
-                            </ol>
+                            <h6 class="card-subtitle mb-2 text-muted">Quando usar? Para focar na parte final de um processo, ignorando o início.</h6>
+                            <p class="card-text">Esta função especializada é ideal para preparar um processo para ser submetido a uma <strong>Inteligência Artificial</strong> que precisa avaliar apenas os últimos movimentos. Ela "corta" o início do PDF, criando um novo arquivo que contém apenas os acontecimentos mais recentes.</p>
+                            <h6 class="mt-3">Recursos Principais:</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><strong>Extração Focada:</strong> Abra um PDF de processo, escolha quantos dos últimos atos deseja manter (ex: 3, 5, 10) e o programa gera um novo PDF enxuto.</li>
+                                <li class="list-group-item"><strong>Processamento em Lote:</strong> Use o botão <strong>"Processar Pasta (Atos)..."</strong> para aplicar a mesma regra de extração (ex: "extrair os últimos 5 atos") para todos os PDFs de processo em uma pasta.</li>
+                            </ul>
+                             <div class="alert alert-secondary mt-3"><strong>Nota:</strong> "Atos" são identificados por marcadores como "Despacho", "Decisão", "Sentença", "Acórdão", etc.</div>
                         </div>
                     </div>
                 </div>
@@ -217,27 +205,15 @@
         <section id="dicas" class="my-5">
             <h2 class="text-center mb-4"><i class="bi bi-lightbulb section-icon"></i><br>Dicas e Solução de Problemas</h2>
              <div class="accordion" id="accordionTips">
-                <div class="accordion-item">
+                 <div class="accordion-item">
                     <h2 class="accordion-header">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#t1">
-                            Qual aba devo usar?
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#t2">
+                            A extração por peças ou por atos não encontra nada. O que fazer?
                         </button>
                     </h2>
-                    <div id="t1" class="accordion-collapse collapse show" data-bs-parent="#accordionTips">
+                    <div id="t2" class="accordion-collapse collapse show" data-bs-parent="#accordionTips">
                         <div class="accordion-body">
-                            Use <strong>"Extração por Peças"</strong> se o seu PDF é um processo judicial com marcadores para cada documento (Petição, Contestação, etc.). Use <strong>"Divisão por Páginas"</strong> para qualquer outro PDF longo que você precise quebrar em pedaços menores, ou para processos que não tenham marcadores.
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t2">
-                            A lista de resultados está vazia na aba "Extração por Peças".
-                        </button>
-                    </h2>
-                    <div id="t2" class="accordion-collapse collapse" data-bs-parent="#accordionTips">
-                        <div class="accordion-body">
-                            Isso significa que o PDF aberto não possui marcadores (bookmarks). Para este tipo de arquivo, a função de extração por peças não funcionará. Utilize a aba <strong>"Divisão por Páginas"</strong> para trabalhar com este documento.
+                            Isso quase sempre significa que o PDF não possui marcadores (bookmarks). Sem eles, as abas de extração inteligente não conseguem identificar os documentos. <strong>Solução:</strong> Utilize a aba <strong>"Divisão por Páginas"</strong> para quebrar o arquivo em partes menores e manejáveis.
                         </div>
                     </div>
                 </div>
@@ -249,7 +225,7 @@
                     </h2>
                     <div id="t3" class="accordion-collapse collapse" data-bs-parent="#accordionTips">
                         <div class="accordion-body">
-                            A barra de progresso na parte inferior da janela deve indicar que o programa está trabalhando. Se ela não se mover por muito tempo, você pode usar o botão <strong>"Cancelar"</strong> para interromper a tarefa com segurança. Processar pastas com centenas de arquivos ou dividir um PDF muito grande pode levar algum tempo.
+                            A barra de progresso na parte inferior da janela deve indicar que o programa está trabalhando. Se ela não se mover por muito tempo, você pode usar o botão <strong>"Cancelar"</strong> para interromper a tarefa com segurança. O processamento em lote de muitos arquivos pode levar um tempo considerável.
                         </div>
                     </div>
                 </div>
