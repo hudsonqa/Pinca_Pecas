@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinça Peças v1.0 - Manual do Usuário</title>
+    <title>Pinça Peças v2.0 - Manual do Usuário</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -53,7 +53,7 @@
         <div class="container">
             <a class="navbar-brand" href="#">
                 <i class="bi bi-pin-angle-fill"></i>
-                Pinça Peças v1.0
+                Pinça Peças v2.0
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -73,11 +73,11 @@
     <div class="container mt-5">
 
         <section id="introducao" class="text-center hero mb-5">
-            <h1 class="display-4">Bem-vindo ao Pinça Peças v1.0!</h1>
-            <p class="lead">Sua suíte completa de automação para extrair, dividir e preparar PDFs de processos com precisão e velocidade.</p>
+            <h1 class="display-4">Bem-vindo ao Pinça Peças v2.0!</h1>
+            <p class="lead">Sua suíte completa de automação para PDFs de processos, agora com uma interface renovada, mais rápida e intuitiva.</p>
             <hr class="my-4">
-            <p class="mb-4">Este manual detalha todas as funcionalidades, incluindo o poderoso processamento em lote agora disponível para todas as ferramentas.</p>
-            <a href="https://github.com/hudsonqa/Pinca_Pecas/raw/main/Pinca_Pecas_v1_0.zip" class="btn btn-light btn-lg">
+            <p class="mb-4">Este manual detalha todas as funcionalidades, incluindo o poderoso processamento em lote e a nova lista de seleção de documentos.</p>
+            <a href="https://drive.google.com/file/d/1RPihyIURnTvWCH6vqEE-vXoFOu8dc4gQ/view" class="btn btn-light btn-lg">
                 <i class="bi bi-download"></i>
                 Baixar Pinça Peças
             </a>
@@ -158,11 +158,36 @@
                         <div class="card-body">
                             <h6 class="card-subtitle mb-2 text-muted">Quando usar? Para extrair documentos específicos de um processo com marcadores.</h6>
                             <p class="card-text">A função principal para organizar processos bem estruturados. Você define quais peças quer encontrar (ex: "Sentença", "Contestação") e o programa as extrai para você.</p>
-                            <h6 class="mt-3">Recursos Principais:</h6>
+                            
+                            <h6 class="mt-4">Como Usar a Nova Lista de Documentos:</h6>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item"><strong>Marcar/Desmarcar:</strong> <span class="badge bg-primary">Clique Simples</span> no item ou selecione-o e pressione a <span class="badge bg-primary">Barra de Espaço</span>.</li>
+                                <li class="list-group-item"><strong>Seleção Múltipla:</strong> Use <code>Ctrl+Clique</code> para selecionar itens individuais ou <code>Shift+Clique</code> para selecionar um intervalo, como em qualquer gerenciador de arquivos.</li>
+                                <li class="list-group-item"><strong>Pré-visualizar:</strong> <span class="badge bg-primary">Duplo Clique</span> em qualquer item para abrir uma janela de preview do documento.</li>
+                                <li class="list-group-item"><strong>Lógica de Extração:</strong> O programa prioriza os itens marcados com o <i class="bi bi-check-square-fill"></i>. Se nenhum item estiver marcado, ele extrairá os itens que estiverem selecionados (com fundo azul).</li>
+                            </ul>
+
+                            <!-- NOVA SEÇÃO ADICIONADA -->
+                            <div class="alert alert-light border mt-4">
+                                <h6 class="alert-heading"><i class="bi bi-search"></i> Busca por Conteúdo (Marcação Avançada)</h6>
+                                <p><strong>Quando usar?</strong> Quando você precisa selecionar todos os documentos a partir de um evento específico que está descrito no <strong>texto do PDF</strong>, e não apenas no título do marcador.</p>
+                                <ol class="ps-3">
+                                    <li>No campo <strong>"Marcar a partir do conteúdo:"</strong>, digite uma frase ou termo único que identifica o início do período que você quer extrair. Exemplo: <code>Homologo os cálculos</code>.</li>
+                                    <li>Clique em <strong>"Buscar e Aplicar"</strong>. O Pinça Peças lerá o PDF página por página até encontrar o primeiro documento que contém esse texto.</li>
+                                    <li>Automaticamente, ele marcará esse documento e todos os seguintes, desmarcando os anteriores.</li>
+                                </ol>
+                                <small class="text-muted"><strong>Nota:</strong> A busca não diferencia maiúsculas de minúsculas. Uma janela de progresso será exibida durante a análise.</small>
+                            </div>
+                            <!-- FIM DA NOVA SEÇÃO -->
+
+                            <h6 class="mt-4">Recursos Adicionais:</h6>
                             <ul class="list-group list-group-flush">
                                 <li class="list-group-item"><strong>Filtros Inteligentes:</strong> Adicione termos de busca que funcionam com lógica "OU". Salve e carregue seus conjuntos de filtros para reutilizá-los.</li>
+                                <li class="list-group-item"><strong>Pré-visualização Integrada:</strong> Dê um duplo-clique em qualquer documento da lista para visualizar suas páginas sem sair do programa.</li>
+                                <li class="list-group-item"><strong>Extração de Texto:</strong> Extraia todo o texto dos documentos selecionados para um arquivo <code>.txt</code>.</li>
+                                <li class="list-group-item"><strong>Estimativa de Tamanho:</strong> Veja o tamanho aproximado do arquivo PDF final antes mesmo de salvá-lo.</li>
                                 <li class="list-group-item"><strong>Opções de Salvamento:</strong> Junte todas as peças encontradas em um único PDF ou salve cada uma em um arquivo separado.</li>
-                                <li class="list-group-item"><strong>Processamento em Lote:</strong> Use o botão <strong>"Processar Pasta..."</strong> para aplicar seus filtros e regras de salvamento a uma pasta inteira de processos de uma só vez.</li>
+                                <li class="list-group-item"><strong>Processamento em Lote:</strong> Use o botão <strong>"Processar Pasta..."</strong> para aplicar seus filtros e regras a uma pasta inteira de processos de uma só vez.</li>
                             </ul>
                         </div>
                     </div>
@@ -205,6 +230,18 @@
         <section id="dicas" class="my-5">
             <h2 class="text-center mb-4"><i class="bi bi-lightbulb section-icon"></i><br>Dicas e Solução de Problemas</h2>
              <div class="accordion" id="accordionTips">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#t1">
+                            Os checkboxes na lista de extração não aparecem como imagens.
+                        </button>
+                    </h2>
+                    <div id="t1" class="accordion-collapse collapse" data-bs-parent="#accordionTips">
+                        <div class="accordion-body">
+                            Isso acontece se os arquivos <code>checked.png</code> e <code>unchecked.png</code> não estiverem na mesma pasta do <code>Pinca_Pecas.exe</code>. Não se preocupe! O programa detecta isso e automaticamente usa os símbolos de texto <strong>☐</strong> e <strong>☑</strong>. A funcionalidade permanece exatamente a mesma.
+                        </div>
+                    </div>
+                </div>
                  <div class="accordion-item">
                     <h2 class="accordion-header">
                         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#t2">
@@ -225,7 +262,7 @@
                     </h2>
                     <div id="t3" class="accordion-collapse collapse" data-bs-parent="#accordionTips">
                         <div class="accordion-body">
-                            A barra de progresso na parte inferior da janela deve indicar que o programa está trabalhando. Se ela não se mover por muito tempo, você pode usar o botão <strong>"Cancelar"</strong> para interromper a tarefa com segurança. O processamento em lote de muitos arquivos pode levar um tempo considerável.
+                            Para operações demoradas, como a "Busca por Conteúdo" ou processamento em lote, uma janela de progresso será exibida. Se ela não se mover por muito tempo, você pode usar o botão <strong>"Cancelar"</strong> para interromper a tarefa com segurança. O processamento de muitos arquivos grandes pode levar um tempo considerável.
                         </div>
                     </div>
                 </div>
